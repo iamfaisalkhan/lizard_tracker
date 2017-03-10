@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 
-def _apply_roi(self, img):
+def roi(img):
     """
     Applies an image mask.
     
@@ -12,9 +12,9 @@ def _apply_roi(self, img):
     imshape = img.shape
     roi = np.array([[
                 (100,100),
-                (imshape[1]/2, imshape[0]/2), 
-                (imshape[1]/2+10, imshape[0]/2), 
-                (imshape[1]-70,imshape[0])
+                (600, 100), 
+                (600, 400), 
+                (100, 400)
             ]], dtype=np.int32)
 
     #defining a blank mask to start with
